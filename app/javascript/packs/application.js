@@ -1,2 +1,2 @@
-import "../css/index";
 import "../alpine/init";
+import "../styles/application";
