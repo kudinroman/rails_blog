@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Instuctions
+rbenv local 3.1.2
+bundle install
+yarn
+make dbreset
+make server / make console
 
-Things you may want to cover:
 
-* Ruby version
+### Ruby version
+3.1.2
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Database creation/reset
+make dbreset
