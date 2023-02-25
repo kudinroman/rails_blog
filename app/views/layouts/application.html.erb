@@ -6,12 +6,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
     <%= stylesheet_pack_tag "application" %>
     <%= javascript_pack_tag "application" %>
     <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "shared/header" %>
+
+    <main class="container m-auto relative pt-[70px] min-h-[calc(100vh-80px)] text-cyan-600">
+      <%= yield %>
+    </main>
+
+    <%= render "shared/footer" %>
   </body>
 </html>

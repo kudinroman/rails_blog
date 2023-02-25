@@ -1,0 +1,26 @@
+<div class="header fixed w-full top-0 z-50 bg-cyan-600 text-cyan-100">
+  <div class="flex container justify-between items-center m-auto h-[70px]">
+    <a href="/" class="w-[40px]">
+      <%= image_pack_tag 'logo.png', alt: 'logo' %>
+    </a>
+    <div class="flex max-w-[300px] gap-4 justify-end">
+      <div x-data="{ open: false }" class="relative">
+
+        <button @click="open = !open" class="flex items-center border border-cyan-50 rounded-lg px-4 py-2">
+          <span class='mr-2'><%= current_user ? current_user.email : 'Sign up or Login' %></span>
+            <%= image_pack_tag 'icons/arrow_down.svg', alt: 'arrow down', 'x-show': 'open', class: 'invert' %>
+            <%= image_pack_tag 'icons/arrow_up.svg', alt: 'arrow up', 'x-show': '!open', class: 'invert' %>
+        </button>
+        <div x-show="open" @click.outside="open = false" class="absolute min-w-[200px] top-[60px] right-0 flex flex-col items-end">
+          <% if current_user %>
+            <%= button_to "Sign out!", destroy_user_session_path, method: :delete, class: 'dropdown_menu_item' %>
+          <% else %>
+            <%= link_to "Sign Up!", new_user_registration_path, class: 'dropdown_menu_item' %>
+            <%= link_to "Login", new_user_session_path, class: 'dropdown_menu_item' %>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

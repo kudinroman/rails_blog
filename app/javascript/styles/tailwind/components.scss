@@ -1,2 +1,32 @@
 @layer components {
+  .devise_container {
+    @apply flex justify-center items-center p-10 pt-20 lg:w-[60%] md:w-[80%] m-auto;
+
+    form {
+      @apply mb-5;
+      .field {
+        @apply mb-3;
+
+        label {
+          @apply text-2xl mb-2;
+        }
+
+        input {
+          @apply h-12 w-full flex justify-center items-center rounded-lg px-6 py-3 bg-cyan-50 text-cyan-600 border border-cyan-600;
+        }
+
+        input[type='checkbox'] {
+          @apply h-5 w-5
+        }
+      }
+
+      input[type='submit'] {
+        @apply border border-cyan-600 rounded-lg px-6 py-3 hover:bg-cyan-50 cursor-pointer; 
+      }
+    }
+  }
+
+  .dropdown_menu_item {
+    @apply bg-cyan-600 text-cyan-50 px-4 py-2 rounded-lg mb-1;
+  }
 }

@@ -2,8 +2,8 @@
 
 <% if current_user %>
   <p>Hi, <%= current_user.email %>!</p>
-  <p>You have <%= current_user.role %> role.</p>
-  
+  <p>You have |<%= current_user.role %>| role.</p>
+
   <% if current_user.admin? %>
     <p>There are <%= User.count %> users.</p>
   <% end %>
@@ -14,3 +14,4 @@
   <br>
   <%= link_to "Login", new_user_session_path %>
 <% end %>
+

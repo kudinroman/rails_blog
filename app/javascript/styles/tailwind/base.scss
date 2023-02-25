@@ -1,2 +1,26 @@
 @layer base {
+  * {
+    @apply focus:outline-none;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-5xl pb-3 lg:pb-5;
+  }
+
+  p {
+    @apply text-sm lg:text-base;
+  }
+
+  /* Change the white to any color */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active{
+    @apply shadow-cyan-50 inset-0;
+  }
+
+  /*Change text in autofill textbox*/
+  input:-webkit-autofill{
+    @apply fill-cyan-600;
+  }
 }

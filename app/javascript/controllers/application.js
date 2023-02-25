@@ -1,4 +1,5 @@
 import { Application } from "@hotwired/stimulus"
+require.context("../images", true);
 
 const application = Application.start()
 
